@@ -6,6 +6,7 @@ on: push
     # paths:
     #   - 'js/client/**'
 
+
 defaults:
   run:
     working-directory: js/client
@@ -20,7 +21,7 @@ jobs:
       run: npm install
     - name: Setup environment
       run: |
-        echo REACT_APP_MAPBOX_TOKEN=${{ secrets.REACT_APP_MAPBOX_TOKEN }} > .env
+        echo REACT_APP_MAP_BOX_TOKEN=${{ secrets.REACT_APP_MAP_BOX_TOKEN }} > .env
     - name: Build project
       run: npm run build
     - name: Configure AWS Credentials
