@@ -1,6 +1,6 @@
 name: Client_Continuous_Deployment
 
-on: [workflow_dispatch]
+on: workflow_dispatch
     # branches:
     #   - master
     # paths:
