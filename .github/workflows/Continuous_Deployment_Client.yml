@@ -34,6 +34,6 @@ jobs:
     - name: Sync Build To S3
       run: |
         aws s3 sync build s3://${{ secrets.S3_BUCKET_PROD }} --follow-symlinks --delete
-    # - name: Invalidate Cloudfront Cache
-    #   run: |
-    #     aws cloudfront create-invalidation --distribution-id ${{ secrets.CDN_DISTRIBUTION_ID_PROD }} --paths "/*"
+    - name: Invalidate Cloudfront Cache
+      run: |
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.CDN_DISTRIBUTION_ID_PROD }} --paths "/*"
