@@ -94,7 +94,7 @@ const ConnectGeosearch = ({ map, getMap }) => {
           </select>
         </div>
         <div className="geoSearchBarComponents">
-          <label>END DATE :</label>
+          <label>END DATE!!! :</label>
           <DatePicker
             selected={endDate}
             onChange={(e) => {
