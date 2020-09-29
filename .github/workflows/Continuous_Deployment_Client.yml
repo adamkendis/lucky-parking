@@ -1,7 +1,6 @@
 name: Client_Continuous_Deployment
 
 on: push
-
     # branches:
     #   - master
     # paths:
