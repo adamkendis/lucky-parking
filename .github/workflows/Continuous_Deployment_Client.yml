@@ -1,11 +1,12 @@
 name: Client_Continuous_Deployment
 
-on: workflow_dispatch
+on:
+  push:
     # branches:
     #   - master
-    # paths:
-    #   - 'js/client/**'
-
+    paths:
+      - 'js/client/**'
+  workflow_dispatch:
 
 defaults:
   run:

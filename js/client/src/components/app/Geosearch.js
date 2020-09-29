@@ -32,7 +32,7 @@ const ConnectGeosearch = ({ map, getMap }) => {
       <div className="geosearch__main">
         <div className="testGeoSearch" ref={searchContainer} />
         <div className="geoSearchBarComponents">
-          <label>From :</label>
+          <label>START DATE :</label>
           <DatePicker
             selected={startDate}
             onChange={(e) => {
@@ -94,7 +94,7 @@ const ConnectGeosearch = ({ map, getMap }) => {
           </select>
         </div>
         <div className="geoSearchBarComponents">
-          <label>To :</label>
+          <label>END DATE :</label>
           <DatePicker
             selected={endDate}
             onChange={(e) => {
