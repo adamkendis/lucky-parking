@@ -1,12 +1,13 @@
-require("dotenv").config();
+require("dotenv").config({ path: __dirname + '/.env' });
 
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3007;
 const router = require("./router.js");
-const path = require("path");
 
-app.use(express.static(path.join(__dirname, "../client/build")));
+app.get('/', (req, res) => {
+  res.json('OK at ' + new Date());
+})
 
 app.use("/api", router);
 
