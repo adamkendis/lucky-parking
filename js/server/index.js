@@ -1,9 +1,12 @@
 require("dotenv").config({ path: __dirname + '/.env' });
 
 const express = require("express");
-const app = express();
-const port = process.env.PORT || 3007;
+const cors = require("cors");
 const router = require("./router.js");
+const port = process.env.PORT || 3007;
+const app = express();
+
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.json('OK at ' + new Date());
